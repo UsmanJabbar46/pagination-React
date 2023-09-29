@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CustomPagination from './component/CustomPagination';
+const App = () => {
+ 
+  const users = [
+    { name: 'User 1', email: 'user1@example.com' },
+    { name: 'User 2', email: 'user2@example.com' },
+    { name: 'User 3', email: 'user1@example.com' },
+    { name: 'User 4', email: 'user2@example.com' },
+    { name: 'User 5', email: 'user1@example.com' },
+    { name: 'User 6', email: 'user2@example.com' },
+    { name: 'User 7', email: 'user1@example.com' },
+    { name: 'User 8', email: 'user2@example.com' },
+    { name: 'User 9', email: 'user1@example.com' },
+    { name: 'User 10', email: 'user2@example.com' },
+    { name: 'User 11', email: 'user1@example.com' },
+    { name: 'User 12', email: 'user2@example.com' },
 
-function App() {
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CustomPagination users={users} usersPerPage={4} />
     </div>
   );
-}
+};
 
 export default App;
+
+
+
